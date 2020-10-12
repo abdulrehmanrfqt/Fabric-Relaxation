@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#282828">
+
+    <LinearLayout
+        android:id="@+id/BackgroundLayout"
+        android:longClickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/dp_logo_com">
+
+        <TextView
+            android:id="@+id/DenimPrive"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="1dp"
+            android:background="#B3B3B3"
+            android:gravity="center"
+            android:text="Denim Privé"
+            android:longClickable="true"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+
+        <EditText
+            android:id="@+id/edtcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:layout_marginTop="3dp"
+            android:background="#9FF3F1F1"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="Tap to Scan Barcode Code"
+            android:inputType="none"
+            android:maxLines="3"
+            android:minLines="2"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textColorHint="#B7B7B7"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+
+        <ProgressBar
+            android:id="@+id/pbbar"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="#D3D3D3" />
+
+
+        <TableLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/table_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:background="#B3B3B3"
+                android:id="@+id/table_row"
+                android:padding="6dp">
+
+                <TextView
+                    android:id="@+id/FabricCode"
+                    android:fontFamily="serif"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:text="Fabric Code"/>
+                <TextView
+                    android:id="@+id/QtyInMeters"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text="Quantity"/>
+                <TextView
+                    android:id="@+id/RollNo"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.6"
+                    android:text="Roll No"/>
+
+                <TextView
+                    android:id="@+id/Date"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.7"
+                    android:text="Date"/>
+
+            </TableRow>
+            <View
+                android:layout_height="2dip"
+                android:layout_width="match_parent"
+                android:background="#454545"/>
+        </TableLayout>
+
+            <ListView
+                android:id="@+id/barcodeListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp"
+                android:divider="#808080"
+                android:gravity="center_horizontal"
+                android:dividerHeight="0.5dp"
+                android:padding="5dp">
+            </ListView>
+
+
+    </LinearLayout>
+</RelativeLayout>
